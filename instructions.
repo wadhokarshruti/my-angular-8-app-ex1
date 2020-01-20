@@ -1,0 +1,46 @@
+1. Make sure nodejs is installed, check version with below command
+	node -v/ npm -v
+
+	(https://nodejs.org/en/download/ to install required version)
+	I prefered .msi 
+	- download visual code editor (https://code.visualstudio.com/ download)
+2. npm i -g @angular/cli or npm install –g @angular/cli@6.0.3 to install specific version 
+	also run command, npm install -g typescript
+	i -> install
+	g -> global
+3. ng new my-app (routing y and SCSS -> superset of css)
+	issue: npm ERR! Unexpected end of JSON input while parsing near '...t":"0.17.6","fs-extra'
+	resolution: npm cache clean --force
+4. cd my-app
+5. ng serve -o
+	o - opens default browser on port 4200 ( http://localhost:4200/)
+6. About folder structure
+	e2e -> end to end tests for angular
+	node_module - bez we have used npm
+	src -> is where we need to work in!!
+7. index.html 
+	<app-root> -> entry point for the app
+8. styles.scss
+	global stylesheet
+9. components
+	my-app/src/app/
+	- app.component.ts
+		import -> packages to be imported
+		decorators -> 
+		logic ->
+	- app.component.spec.ts -> testing
+	- app.component.scss
+	- app.component.html
+
+10. add component 
+	ng generate component home or
+	ng g c home
+11. app.component.modules 
+	-> components are added automatically
+12. app-routing.module.ts
+	-> import new components
+	-> add instances in routes array
+13. app.component.html 
+	<router-outlet> -> routing
+	
+		
