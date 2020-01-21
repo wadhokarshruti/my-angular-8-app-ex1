@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpService} from '../http.service';
 
 @Component({
   selector: 'app-list',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
+  providers: Object;
 
-  constructor() { }
+  constructor(private _http:HttpService) { }
 
   ngOnInit() {
+    this._http.availableBreweries().subscribe(data => {
+      this.providers = data;
+      console.log(this.providers);
+    });
   }
 
 }

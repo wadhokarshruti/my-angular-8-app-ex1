@@ -1,1 +1,17 @@
 <p>home works!</p>
+<div class="play-container">
+    <p> You've clicked <span (click)="countOnClick()">this </span>{{clickCounter}} times.</p>
+</div>
+<div class="play-container">
+    <input type="text" [(ngModel)]="name">
+    <br>
+    <strong>Did you say </strong> {{name}}
+</div>
+<div class="play-container" [style.background-color]="clickCounter > 4 ? 'yellow': 'grey'">
+    <ng-template [ngIf]="clickCounter>4" [ngIfElse]="none">
+        If condition salisfied!!
+    </ng-template>
+    <ng-template #none>
+        Else condition satisfied!!
+    </ng-template>
+</div>

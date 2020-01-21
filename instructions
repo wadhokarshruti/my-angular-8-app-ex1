@@ -42,5 +42,36 @@
 	-> add instances in routes array
 13. app.component.html 
 	<router-outlet> -> routing
+14. ngModel for two way data binding
+	in app.module.ts
+	-> import { FormsModule } from '@angular/forms';
+	-> update imports array
+15. countOnClick
+	declare function in respective .component.ts file
+16. style binding [ngStyle] = "{}" for multiple conditional CSS attributes
+17. <ng-template> can have [ngIf] and [ngIfElse] with ng-template reference
+18. ng generate service http
+	-> generate service name http
+	-> no folder for files
+	-> structure similer not same as component 
+		- imports Injectable from @angular/core
+		- decorator @Injectable
+		- doesn't implement onInit linke component
+		- only constructor , no ngOnInit
+19. for HttpClient to work update in app.module.ts
+20. CORS issue? Remember it is not issue from Angular side,
+	Add below code in Spring-Boot service 
+	
+	@Configuration
+	public class AppConf implements WebMvcConfigurer {
+
+		@Override
+		public void addCorsMappings(CorsRegistry registry) {
+			registry.addMapping("/**")
+					.allowedOrigins("http://localhost:4200")
+					.allowedMethods("GET");
+		}
+	}
+
 	
 		
