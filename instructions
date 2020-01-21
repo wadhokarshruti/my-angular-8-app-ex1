@@ -61,7 +61,7 @@
 19. for HttpClient to work update in app.module.ts
 20. CORS issue? Remember it is not issue from Angular side,
 	Add below code in Spring-Boot service 
-	
+
 	@Configuration
 	public class AppConf implements WebMvcConfigurer {
 
@@ -72,6 +72,10 @@
 					.allowedMethods("GET");
 		}
 	}
+21. for prod ready deployment
+	ng build --prod
+22. to run on light server
+	npm i -g light-server
 
 	
 		
